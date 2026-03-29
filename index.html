@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>For Adithya CM — A Gift From The Heart 💛</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Lato:wght@300;400;700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cream:#fdf6ec;--warm:#f5e6c8;--amber:#c8860a;--gold:#e8b84b;
+  --brown:#6b3f1a;--dark:#1a0e05;--text:#3d2510;--muted:#a07850;
+  --soft:#f9efe0;--deep:#0a0500;
+}
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent;}
+html{scroll-behavior:smooth;}
+body{font-family:'Lato',sans-serif;background:var(--deep);color:var(--cream);overflow-x:hidden;}
+
+/* GRAIN */
+body::before{content:'';position:fixed;inset:0;z-index:1000;pointer-events:none;opacity:0.03;
+background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+background-size:200px;}
+
+/* OPENING */
+#opening{position:fixed;inset:0;z-index:9999;background:var(--deep);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:2rem;transition:opacity 1.5s ease;}
+#opening.fade-out{opacity:0;pointer-events:none;}
+.ol{font-family:'Playfair Display',serif;color:rgba(232,184,75,0);margin-bottom:0.9rem;animation:tr 1s ease forwards;font-style:italic;}
+.ol:nth-child(1){animation-delay:0.5s;font-size:clamp(1rem,3vw,1.3rem);letter-spacing:0.1em;}
+.ol:nth-child(2){animation-delay:1.6s;font-size:clamp(2rem,7vw,3.5rem);font-style:normal;font-weight:700;}
+.ol:nth-child(3){animation-delay:2.7s;font-size:clamp(1rem,3vw,1.3rem);}
+.ol:nth-child(4){animation-delay:3.8s;font-size:clamp(0.75rem,2vw,0.9rem);letter-spacing:0.3em;text-transform:uppercase;}
+@keyframes tr{from{color:rgba(232,184,75,0);transform:translateY(12px);}to{color:rgba(232,184,75,0.9);transform:translateY(0);}}
+.skip-btn{position:absolute;bottom:2rem;right:2rem;font-size:0.75rem;letter-spacing:0.2em;text-transform:uppercase;color:rgba(232,184,75,0.35);cursor:pointer;animation:fi 1s 5.5s both;border:1px solid rgba(232,184,75,0.2);padding:0.45rem 1.1rem;border-radius:50px;transition:all 0.3s;}
+.skip-btn:hover{color:rgba(232,184,75,0.9);border-color:rgba(232,184,75,0.5);}
+@keyframes fi{from{opacity:0;}to{opacity:1;}}
+
+/* MAIN */
+#main-content{opacity:0;transition:opacity 1.5s ease;}
+#main-content.visible{opacity:1;}
+
+/* HERO */
+.hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:3rem 1.5rem;position:relative;overflow:hidden;background:radial-gradient(ellipse at center top,#2a1505 0%,var(--deep) 70%);}
+#stars-c{position:absolute;inset:0;pointer-events:none;}
+.star{position:absolute;border-radius:50%;background:white;animation:stw var(--d) var(--dl) infinite ease-in-out;}
+@keyframes stw{0%,100%{opacity:var(--op);transform:scale(1);}50%{opacity:1;transform:scale(1.6);}}
+.beam{position:absolute;top:0;left:50%;transform:translateX(-50%);width:2px;height:55%;background:linear-gradient(180deg,rgba(232,184,75,0.5),transparent);animation:bpulse 4s infinite ease-in-out;pointer-events:none;}
+@keyframes bpulse{0%,100%{opacity:0.3;}50%{opacity:0.7;}}
+.h-eye{font-size:0.7rem;letter-spacing:0.4em;text-transform:uppercase;color:var(--gold);margin-bottom:2rem;animation:fu 1.2s 0.3s ease-out both;}
+.h-big{font-family:'Playfair Display',serif;font-size:clamp(3.5rem,14vw,9rem);font-weight:700;line-height:0.95;color:var(--cream);animation:fu 1.2s 0.5s ease-out both;}
+.h-big .g{color:var(--gold);font-style:italic;display:block;background:linear-gradient(135deg,#e8b84b,#fff3c4,#c8860a);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.h-name{font-family:'Playfair Display',serif;font-size:clamp(2rem,8vw,5rem);font-style:italic;color:var(--gold);animation:fu 1.2s 0.7s ease-out both;margin-bottom:1rem;text-shadow:0 0 40px rgba(232,184,75,0.4);}
+.h-sub{font-size:0.9rem;letter-spacing:0.2em;color:rgba(232,184,75,0.5);animation:fu 1.2s 0.9s ease-out both;margin-bottom:3rem;text-transform:uppercase;}
+.h-scroll{font-size:0.72rem;letter-spacing:0.25em;text-transform:uppercase;color:rgba(232,184,75,0.4);animation:fu 1.2s 1.2s ease-out both;display:flex;flex-direction:column;align-items:center;gap:0.5rem;}
+.sl{width:1px;height:0;background:linear-gradient(180deg,var(--gold),transparent);animation:slg 2s 2.5s infinite ease-in-out;}
+@keyframes slg{0%{height:0;opacity:0;}50%{height:40px;opacity:1;}100%{height:40px;opacity:0;}}
+@keyframes fu{from{opacity:0;transform:translateY(30px);}to{opacity:1;transform:translateY(0);}}
+
+/* PARTICLES */
+.particle{position:fixed;border-radius:50%;pointer-events:none;background:var(--gold);opacity:0;animation:pr var(--d) var(--dl) infinite ease-in;z-index:0;}
+@keyframes pr{0%{transform:translateY(100vh) scale(0);opacity:0;}10%{opacity:0.35;}90%{opacity:0.2;}100%{transform:translateY(-10vh) scale(1);opacity:0;}}
+
+/* CHAPTER */
+.chapter{padding:5rem 1.5rem;max-width:680px;margin:0 auto;position:relative;}
+.ch-num{font-family:'Playfair Display',serif;font-size:8rem;font-weight:700;color:rgba(232,184,75,0.05);position:absolute;top:-2rem;left:-1rem;line-height:1;pointer-events:none;font-style:italic;}
+.ch-label{font-size:0.68rem;letter-spacing:0.35em;text-transform:uppercase;color:var(--gold);margin-bottom:0.7rem;opacity:0;transform:translateY(15px);transition:opacity 0.8s,transform 0.8s;}
+.ch-label.vis{opacity:1;transform:translateY(0);}
+.ch-title{font-family:'Playfair Display',serif;font-size:clamp(2rem,7vw,3.2rem);color:var(--cream);line-height:1.15;margin-bottom:1rem;opacity:0;transform:translateY(20px);transition:opacity 0.8s 0.1s,transform 0.8s 0.1s;}
+.ch-title.vis{opacity:1;transform:translateY(0);}
+.gline{height:2px;background:linear-gradient(90deg,var(--gold),transparent);margin-bottom:2rem;opacity:0;width:0;transition:opacity 0.8s 0.2s,width 0.8s 0.2s;}
+.gline.vis{opacity:1;width:50px;}
+
+/* FILM STRIP */
+.film-strip{display:flex;gap:0.6rem;overflow-x:auto;padding:1rem 0 1.5rem;scrollbar-width:none;-webkit-overflow-scrolling:touch;cursor:grab;}
+.film-strip:active{cursor:grabbing;}
+.film-strip::-webkit-scrollbar{display:none;}
+.film-frame{flex-shrink:0;position:relative;width:190px;background:#111;padding:0.5rem 0.5rem 2.5rem;box-shadow:0 8px 30px rgba(0,0,0,0.5);opacity:0;transform:translateY(30px) rotate(var(--fr));transition:opacity 0.7s var(--fd) ease,transform 0.7s var(--fd) ease;}
+.film-frame.vis{opacity:1;transform:translateY(0) rotate(var(--fr));}
+.film-frame:hover{transform:translateY(-8px) rotate(0deg) scale(1.06) !important;box-shadow:0 16px 50px rgba(0,0,0,0.7),0 0 30px rgba(232,184,75,0.2);z-index:10;}
+.film-frame img{width:100%;aspect-ratio:1;object-fit:cover;display:block;filter:sepia(20%) contrast(1.1) brightness(0.9);transition:filter 0.4s;}
+.film-frame:hover img{filter:sepia(0%) contrast(1.12) brightness(1.05);}
+.film-label{position:absolute;bottom:0;left:0;right:0;height:2.5rem;display:flex;align-items:center;justify-content:center;font-family:'Dancing Script',cursive;font-size:0.88rem;color:rgba(232,184,75,0.75);}
+.film-frame::before,.film-frame::after{content:'⬤ ⬤ ⬤ ⬤';position:absolute;left:0;right:0;font-size:4px;letter-spacing:8px;color:rgba(255,255,255,0.12);text-align:center;}
+.film-frame::before{top:2px;}.film-frame::after{bottom:2.7rem;}
+
+/* MEMORY GRID */
+.mem-grid{display:grid;grid-template-columns:1fr 1fr;gap:0.85rem;}
+.mem-card{position:relative;overflow:hidden;border-radius:8px;aspect-ratio:1;opacity:0;transform:scale(0.92);transition:opacity 0.6s var(--md),transform 0.6s var(--md);cursor:pointer;}
+.mem-card.vis{opacity:1;transform:scale(1);}
+.mem-card img{width:100%;height:100%;object-fit:cover;filter:sepia(20%) contrast(1.1) brightness(0.88);transition:filter 0.5s,transform 0.5s;}
+.mem-card:hover img{filter:sepia(0%) contrast(1.15) brightness(1.05);transform:scale(1.07);}
+.mem-card .ov{position:absolute;inset:0;background:linear-gradient(0deg,rgba(10,5,0,0.85) 0%,transparent 60%);display:flex;align-items:flex-end;padding:0.8rem;}
+.mem-card .cap{font-family:'Dancing Script',cursive;font-size:0.95rem;color:rgba(232,184,75,0.9);}
+.mem-card.wide{grid-column:1/-1;aspect-ratio:16/9;}
+
+/* LETTER */
+.letter{background:rgba(255,255,255,0.03);border:1px solid rgba(232,184,75,0.15);border-radius:12px;padding:2rem 1.8rem;position:relative;overflow:hidden;opacity:0;transform:translateY(20px);transition:opacity 0.9s,transform 0.9s;}
+.letter.vis{opacity:1;transform:translateY(0);}
+.letter::before{content:'❝';position:absolute;top:-0.5rem;left:1rem;font-size:6rem;color:var(--gold);opacity:0.1;font-family:'Playfair Display',serif;line-height:1;}
+.letter::after{position:absolute;top:0;left:0;right:0;bottom:0;background:radial-gradient(ellipse at top left,rgba(232,184,75,0.04),transparent 60%);content:'';pointer-events:none;}
+.lt{font-family:'Playfair Display',serif;font-size:1.05rem;line-height:2.1;color:rgba(253,246,236,0.85);font-style:italic;position:relative;z-index:1;}
+.lt b{color:var(--gold);font-style:normal;}
+.ls{margin-top:1.5rem;font-family:'Dancing Script',cursive;font-size:1.4rem;color:var(--gold);}
+
+/* HEARTBEAT */
+.hbwrap{padding:2rem 1.5rem;text-align:center;opacity:0;transition:opacity 1s;}
+.hbwrap.vis{opacity:1;}
+.hbl{font-size:0.68rem;letter-spacing:0.3em;text-transform:uppercase;color:var(--gold);margin-bottom:1.5rem;}
+svg.hb{width:100%;max-width:600px;height:80px;}
+.hbp{stroke:var(--gold);stroke-width:2;fill:none;stroke-dasharray:1000;stroke-dashoffset:1000;animation:dl 3s ease forwards;}
+.hbg{stroke:rgba(232,184,75,0.2);stroke-width:8;fill:none;stroke-dasharray:1000;stroke-dashoffset:1000;animation:dl 3s ease forwards;}
+@keyframes dl{to{stroke-dashoffset:0;}}
+
+/* WISHES */
+.wishes{display:flex;flex-direction:column;gap:1rem;}
+.wb{display:flex;align-items:flex-start;gap:1rem;opacity:0;transform:translateX(-30px);transition:opacity 0.7s var(--wd),transform 0.7s var(--wd);padding:1.2rem 1.4rem;background:rgba(255,255,255,0.03);border-left:2px solid var(--gold);border-radius:0 12px 12px 0;}
+.wb.vis{opacity:1;transform:translateX(0);}
+.wi{font-size:1.8rem;flex-shrink:0;}
+.wt{font-family:'Playfair Display',serif;font-size:1rem;color:var(--cream);margin-bottom:0.2rem;font-weight:700;}
+.wst{font-size:0.88rem;color:var(--muted);line-height:1.6;}
+
+/* FINALE */
+.finale{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:4rem 1.5rem;position:relative;overflow:hidden;background:radial-gradient(ellipse at center,#1e0d02 0%,var(--deep) 70%);}
+.rings{position:absolute;inset:0;pointer-events:none;display:flex;align-items:center;justify-content:center;}
+.ring{position:absolute;border-radius:50%;border:1px solid rgba(232,184,75,var(--rop));animation:rp var(--rd) var(--rdl) infinite ease-out;}
+@keyframes rp{0%{transform:scale(0.8);opacity:var(--rop);}100%{transform:scale(2.5);opacity:0;}}
+.f20{font-family:'Playfair Display',serif;font-size:clamp(8rem,30vw,18rem);font-weight:700;line-height:1;color:transparent;-webkit-text-stroke:1px rgba(232,184,75,0.15);position:absolute;letter-spacing:-0.05em;animation:fi 1s 0.3s both;pointer-events:none;}
+.fc{position:relative;z-index:2;}
+.ftag{font-size:0.68rem;letter-spacing:0.4em;text-transform:uppercase;color:var(--gold);margin-bottom:1.5rem;animation:fu 1s 0.4s both;}
+.fh{font-family:'Playfair Display',serif;font-size:clamp(2.5rem,10vw,5.5rem);font-weight:700;color:var(--cream);line-height:1.05;animation:fu 1s 0.6s both;}
+.fh em{color:var(--gold);font-style:italic;display:block;}
+.fq{font-family:'Playfair Display',serif;font-size:1rem;color:rgba(232,184,75,0.6);max-width:380px;line-height:1.9;margin:1.5rem auto 2.5rem;font-style:italic;animation:fu 1s 0.8s both;}
+.fbtns{display:flex;gap:1rem;flex-wrap:wrap;justify-content:center;animation:fu 1s 1s both;}
+.fbtn{font-family:'Lato',sans-serif;font-weight:700;font-size:0.8rem;letter-spacing:0.15em;text-transform:uppercase;border-radius:50px;padding:1rem 2.2rem;cursor:pointer;border:none;transition:transform 0.15s;-webkit-tap-highlight-color:transparent;}
+.fbtn:active{transform:scale(0.95);}
+.fg{background:linear-gradient(135deg,#e8b84b,#c8860a);color:#1a0e05;box-shadow:0 4px 20px rgba(232,184,75,0.4),0 2px 0 #8a5c04;}
+.fo{background:transparent;color:var(--gold);border:1.5px solid rgba(232,184,75,0.4);}
+
+/* CONFETTI */
+.conf{position:fixed;pointer-events:none;z-index:5000;animation:cf var(--d) var(--dl) ease-in forwards;opacity:0;}
+@keyframes cf{0%{transform:translateY(-20px) rotate(0deg);opacity:0;}5%{opacity:1;}100%{transform:translateY(105vh) rotate(720deg);opacity:0;}}
+
+/* LIGHTBOX */
+#lb{display:none;position:fixed;inset:0;z-index:8000;background:rgba(0,0,0,0.95);align-items:center;justify-content:center;padding:1rem;}
+#lb.open{display:flex;}
+#lb img{max-width:100%;max-height:90vh;object-fit:contain;border-radius:4px;}
+#lbc{position:absolute;top:1.5rem;right:1.5rem;font-size:2rem;color:var(--gold);cursor:pointer;background:none;border:none;line-height:1;}
+</style>
+</head>
+<body>
+
+<!-- LIGHTBOX -->
+<div id="lb" onclick="closeLB()">
+  <button id="lbc" onclick="closeLB()">✕</button>
+  <img id="lbimg" src="" alt="">
+</div>
+
+<!-- OPENING -->
+<div id="opening">
+  <div class="ol">This one is for someone very special...</div>
+  <div class="ol">Adithya CM</div>
+  <div class="ol">Twenty years of being absolutely extraordinary.</div>
+  <div class="ol">Scroll slowly. Feel every word. 💛</div>
+  <div class="skip-btn" onclick="skipOpening()">Skip ›</div>
+</div>
+
+<!-- MAIN -->
+<div id="main-content">
+
+<!-- HERO -->
+<div class="hero">
+  <div id="stars-c"></div>
+  <div class="beam"></div>
+  <div class="h-eye">✦ A birthday tribute ✦</div>
+  <div class="h-big">Happy<span class="g">Birthday</span></div>
+  <div class="h-name">Adithya CM</div>
+  <div class="h-sub">Twenty years of you ✦ 2026</div>
+  <div class="h-scroll">Scroll to relive the memories<div class="sl"></div></div>
+</div>
+
+<!-- CH 1 -->
+<div class="chapter">
+  <div class="ch-num">01</div>
+  <div class="ch-label">Chapter One</div>
+  <div class="ch-title">Once upon a time,<br>a boy was born. 🌅</div>
+  <div class="gline"></div>
+  <div class="letter">
+    <div class="lt">
+      It started with a small, beautiful sound that changed everything. <b>Adithya</b> came into this world — and from that very first moment, he was already extraordinary. 🌟<br><br>
+      Nobody knew then just how much joy, laughter, and love this one little soul was going to bring into every life around him.<br><br>
+      <b>Twenty years later</b> — we are still not done being amazed by you.
+    </div>
+  </div>
+</div>
+
+<!-- CH 2 — SCHOOL FILM STRIP -->
+<div class="chapter">
+  <div class="ch-num">02</div>
+  <div class="ch-label">Chapter Two</div>
+  <div class="ch-title">The school days 📚<br><span style="font-size:0.7em;color:var(--muted);font-style:italic;">CEOA Matric, Madurai</span></div>
+  <div class="gline"></div>
+  <div class="film-strip">
+    <div class="film-frame" style="--fr:-2deg;--fd:0.1s">
+      <img src="p13.jpeg" alt="School days">
+      <div class="film-label">1st standard ⭐</div>
+    </div>
+    <div class="film-frame" style="--fr:1.5deg;--fd:0.2s">
+      <img src="p14.jpeg" alt="School days">
+      <div class="film-label">UKG smiles 😊</div>
+    </div>
+    <div class="film-frame" style="--fr:-1deg;--fd:0.3s">
+      <img src="p15.jpeg" alt="School days">
+      <div class="film-label">Growing up 🌱</div>
+    </div>
+  </div>
+  <div class="letter" style="margin-top:1.5rem;">
+    <div class="lt">
+      Remember those tiny uniforms? That little badge hanging around your neck? <b>You were always the brightest in the room</b> — even then, even before you knew it yourself. 💛<br><br>
+      Those school corridors, those classroom mornings — they shaped the <b>brilliant mind</b> you carry today.
+    </div>
+  </div>
+</div>
+
+<!-- HEARTBEAT -->
+<div class="hbwrap chapter" style="padding:2rem 1.5rem;">
+  <div class="hbl">The rhythm of your story</div>
+  <svg class="hb" viewBox="0 0 600 80">
+    <path class="hbg" d="M0,40 L60,40 L80,40 L100,10 L120,70 L140,5 L160,70 L180,40 L220,40 L240,40 L260,15 L280,65 L300,5 L320,65 L340,40 L380,40 L400,40 L420,20 L440,60 L460,10 L480,70 L500,40 L600,40"/>
+    <path class="hbp" d="M0,40 L60,40 L80,40 L100,10 L120,70 L140,5 L160,70 L180,40 L220,40 L240,40 L260,15 L280,65 L300,5 L320,65 L340,40 L380,40 L400,40 L420,20 L440,60 L460,10 L480,70 L500,40 L600,40"/>
+  </svg>
+</div>
+
+<!-- CH 3 — FRIENDS GRID -->
+<div class="chapter">
+  <div class="ch-num">03</div>
+  <div class="ch-label">Chapter Three</div>
+  <div class="ch-title">The crew that made life worth it 🤙</div>
+  <div class="gline"></div>
+  <div class="mem-grid" style="margin-bottom:1.5rem;">
+    <div class="mem-card wide" style="--md:0s" onclick="openLB(this)">
+      <img src="p2.jpeg" alt="Night out">
+      <div class="ov"><div class="cap">Night out with the gang 🌙</div></div>
+    </div>
+    <div class="mem-card" style="--md:0.1s" onclick="openLB(this)">
+      <img src="p1.jpeg" alt="Park">
+      <div class="ov"><div class="cap">Park days 🎡</div></div>
+    </div>
+    <div class="mem-card" style="--md:0.2s" onclick="openLB(this)">
+      <img src="p9.jpeg" alt="College">
+      <div class="ov"><div class="cap">College days 🎓</div></div>
+    </div>
+    <div class="mem-card" style="--md:0.3s" onclick="openLB(this)">
+      <img src="p8.jpeg" alt="Friends">
+      <div class="ov"><div class="cap">The squad 💛</div></div>
+    </div>
+    <div class="mem-card" style="--md:0.4s" onclick="openLB(this)">
+      <img src="p11.jpeg" alt="Field">
+      <div class="ov"><div class="cap">Field trip 🌾</div></div>
+    </div>
+  </div>
+  <div class="letter">
+    <div class="lt">
+      Then came the people who turned ordinary days into <b>memories you'll carry forever</b>. The late nights. The inside jokes nobody else understands. The friends who feel like family. 🤝<br><br>
+      <b>Adithya</b>, you have a rare gift — the gift of making everyone around you feel like they belong. That is precious. <b>That is you.</b>
+    </div>
+  </div>
+</div>
+
+<!-- CH 4 — MORE FILM STRIP -->
+<div class="chapter">
+  <div class="ch-num">04</div>
+  <div class="ch-label">Chapter Four</div>
+  <div class="ch-title">Every frame, a treasure 🎞️</div>
+  <div class="gline"></div>
+  <div class="film-strip">
+    <div class="film-frame" style="--fr:-2.5deg;--fd:0.1s">
+      <img src="p3.jpeg" alt="Friends"><div class="film-label">Trio vibes 🌿</div>
+    </div>
+    <div class="film-frame" style="--fr:1.5deg;--fd:0.2s">
+      <img src="p4.jpeg" alt="College"><div class="film-label">Class gang 📝</div>
+    </div>
+    <div class="film-frame" style="--fr:-1deg;--fd:0.3s">
+      <img src="p5.jpeg" alt="Friends"><div class="film-label">Good times 😂</div>
+    </div>
+    <div class="film-frame" style="--fr:2deg;--fd:0.4s">
+      <img src="p6.jpeg" alt="Edit"><div class="film-label">Legendary 🔥</div>
+    </div>
+    <div class="film-frame" style="--fr:-2deg;--fd:0.5s">
+      <img src="p7.jpeg" alt="Friends"><div class="film-label">Crazy crew 🤪</div>
+    </div>
+    <div class="film-frame" style="--fr:1deg;--fd:0.6s">
+      <img src="p10.jpeg" alt="Fun"><div class="film-label">Devil squad 😈</div>
+    </div>
+    <div class="film-frame" style="--fr:-1.5deg;--fd:0.7s">
+      <img src="p12.jpeg" alt="Solo"><div class="film-label">That walk 🚶</div>
+    </div>
+  </div>
+</div>
+
+<!-- CH 5 — LETTER -->
+<div class="chapter">
+  <div class="ch-num">05</div>
+  <div class="ch-label">Chapter Five</div>
+  <div class="ch-title">What I want to say to you 💌</div>
+  <div class="gline"></div>
+  <div class="letter">
+    <div class="lt">
+      Dear <b>Adithya</b>,<br><br>
+      I have been trying to find the right words for a while now. But some feelings are too big for ordinary sentences.<br><br>
+      So here it is, as simply as I can say it — <b>thank you</b>. Thank you for every laugh. Every memory. Every moment where you showed up and made everything better just by being <b>you</b>.<br><br>
+      You are 20 now. And I need you to know something important: <b>the world genuinely needs the version of you that is coming next.</b> The dreams you are carrying? Chase them — every single one. The people who believe in you? We are not going anywhere.<br><br>
+      On your hardest days, remember these photos. Remember these faces. Remember that you have <b>lived a beautiful life already</b> — and the most beautiful chapters have not even been written yet. 🌅<br><br>
+      <b>Happy Birthday, Adithya CM.</b><br>This one is for you. All of it. 💛
+    </div>
+    <div class="ls">— With all my heart, always 💛</div>
+  </div>
+</div>
+
+<!-- CH 6 — WISHES -->
+<div class="chapter">
+  <div class="ch-num">06</div>
+  <div class="ch-label">Chapter Six</div>
+  <div class="ch-title">20 wishes for your 20th year 🕯️</div>
+  <div class="gline"></div>
+  <div class="wishes">
+    <div class="wb" style="--wd:0s"><div class="wi">🔥</div><div><div class="wt">Burn brighter than ever</div><div class="wst">May this year be the one where you truly catch fire and become everything you are meant to be.</div></div></div>
+    <div class="wb" style="--wd:0.1s"><div class="wi">🌍</div><div><div class="wt">See the world</div><div class="wst">May new places, new faces, and new adventures fill this beautiful chapter of your life.</div></div></div>
+    <div class="wb" style="--wd:0.2s"><div class="wi">💪</div><div><div class="wt">Grow through everything</div><div class="wst">May every challenge that comes your way make you stronger, wiser, and more powerful.</div></div></div>
+    <div class="wb" style="--wd:0.3s"><div class="wi">😂</div><div><div class="wt">Laugh every single day</div><div class="wst">May your belly laughs never stop — the world is better when you are smiling.</div></div></div>
+    <div class="wb" style="--wd:0.4s"><div class="wi">❤️</div><div><div class="wt">Feel deeply loved</div><div class="wst">Because you are, Adithya. More than you will ever fully understand.</div></div></div>
+    <div class="wb" style="--wd:0.5s"><div class="wi">🚀</div><div><div class="wt">Launch into your destiny</div><div class="wst">20 is not just another year — it is your launchpad. Take off. Go far. Don't look back.</div></div></div>
+    <div class="wb" style="--wd:0.6s"><div class="wi">🤝</div><div><div class="wt">Keep your people close</div><div class="wst">Those friends in the photos? They are gold. Hold on tight to every one of them.</div></div></div>
+    <div class="wb" style="--wd:0.7s"><div class="wi">👑</div><div><div class="wt">Own who you are</div><div class="wst">There is only one Adithya CM — and the world is lucky to have exactly you.</div></div></div>
+  </div>
+</div>
+
+<!-- FINALE -->
+<div class="finale">
+  <div class="rings">
+    <div class="ring" style="width:200px;height:200px;--rop:0.15;--rd:3s;--rdl:0s;"></div>
+    <div class="ring" style="width:320px;height:320px;--rop:0.1;--rd:3s;--rdl:1s;"></div>
+    <div class="ring" style="width:440px;height:440px;--rop:0.06;--rd:3s;--rdl:2s;"></div>
+  </div>
+  <div class="f20">20</div>
+  <div class="fc">
+    <div class="ftag">✦ The end of chapter one ✦ The start of everything ✦</div>
+    <div class="fh">Happy Birthday,<em>Adithya CM</em></div>
+    <div class="fq">"Twenty years of building the man the world is waiting for. The best is absolutely yet to come." 🌅</div>
+    <div class="fbtns">
+      <button class="fbtn fg" onclick="toggleMusic()" id="mbtn">🎵 Play Birthday Song</button>
+      <button class="fbtn fo" onclick="celebrate()">🎊 Celebrate!</button>
+    </div>
+  </div>
+</div>
+
+</div><!-- end main-content -->
+
+<script>
+// Opening
+setTimeout(()=>{
+  document.getElementById('opening').classList.add('fade-out');
+  setTimeout(()=>{
+    document.getElementById('opening').style.display='none';
+    document.getElementById('main-content').classList.add('visible');
+  },1500);
+},6500);
+function skipOpening(){
+  document.getElementById('opening').classList.add('fade-out');
+  setTimeout(()=>{document.getElementById('opening').style.display='none';document.getElementById('main-content').classList.add('visible');},800);
+}
+
+// Stars
+const sc=document.getElementById('stars-c');
+for(let i=0;i<120;i++){
+  const s=document.createElement('div');s.className='star';
+  const sz=Math.random()*2.5+0.5;
+  const op=(Math.random()*0.5+0.1).toFixed(2);
+  s.style.cssText=`width:${sz}px;height:${sz}px;left:${Math.random()*100}%;top:${Math.random()*100}%;--d:${(Math.random()*5+3).toFixed(1)}s;--dl:-${(Math.random()*8).toFixed(1)}s;--op:${op}`;
+  sc.appendChild(s);
+}
+
+// Particles
+for(let i=0;i<18;i++){
+  const p=document.createElement('div');p.className='particle';
+  const sz=Math.random()*4+1;
+  p.style.cssText=`width:${sz}px;height:${sz}px;left:${Math.random()*100}%;--d:${(Math.random()*10+8).toFixed(1)}s;--dl:-${(Math.random()*15).toFixed(1)}s`;
+  document.body.appendChild(p);
+}
+
+// Scroll observer
+const obs=new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      e.target.classList.add('vis');
+      e.target.querySelectorAll('.film-frame,.mem-card,.wb').forEach((el,i)=>{
+        setTimeout(()=>el.classList.add('vis'),i*120);
+      });
+    }
+  });
+},{threshold:0.1});
+document.querySelectorAll('.ch-label,.ch-title,.gline,.letter,.hbwrap,.film-frame,.mem-card,.wb').forEach(el=>obs.observe(el));
+
+// Drag scroll on film strips
+document.querySelectorAll('.film-strip').forEach(strip=>{
+  let isDown=false,startX,scrollLeft;
+  strip.addEventListener('mousedown',e=>{isDown=true;startX=e.pageX-strip.offsetLeft;scrollLeft=strip.scrollLeft;});
+  strip.addEventListener('mouseleave',()=>isDown=false);
+  strip.addEventListener('mouseup',()=>isDown=false);
+  strip.addEventListener('mousemove',e=>{if(!isDown)return;e.preventDefault();strip.scrollLeft=scrollLeft-(e.pageX-strip.offsetLeft-startX)*1.5;});
+});
+
+// Lightbox
+function openLB(card){
+  document.getElementById('lbimg').src=card.querySelector('img').src;
+  document.getElementById('lb').classList.add('open');
+}
+function closeLB(){document.getElementById('lb').classList.remove('open');}
+
+// Confetti
+const cp=['#e8b84b','#c8860a','#fff8e7','#ffd580','#d4a017','#f5e6c8','#ffffff','#ffcc44'];
+function celebrate(){
+  for(let i=0;i<100;i++){
+    const c=document.createElement('div');c.className='conf';
+    const w=Math.random()*10+4;const circle=Math.random()>0.55;
+    c.style.cssText=`width:${w}px;height:${circle?w:w*1.6}px;left:${Math.random()*100}%;top:-20px;background:${cp[Math.floor(Math.random()*cp.length)]};--d:${(Math.random()*4+2.5).toFixed(1)}s;--dl:${(Math.random()*2).toFixed(2)}s;border-radius:${circle?'50%':'2px'}`;
+    document.body.appendChild(c);
+    setTimeout(()=>c.remove(),7000);
+  }
+}
+
+// Birthday tune
+let audioCtx=null,playing=false;
+const notes=[[261.63,.4],[261.63,.2],[293.66,.6],[261.63,.6],[349.23,.6],[329.63,1.0],[261.63,.4],[261.63,.2],[293.66,.6],[261.63,.6],[392.00,.6],[349.23,1.0],[261.63,.4],[261.63,.2],[523.25,.6],[440.00,.6],[349.23,.6],[329.63,.6],[293.66,1.0],[466.16,.4],[466.16,.2],[440.00,.6],[349.23,.6],[392.00,.6],[349.23,1.2]];
+function playNotes(){
+  let t=audioCtx.currentTime+0.08;
+  notes.forEach(([f,d])=>{
+    [['triangle',.22,1],['sine',.07,2],['sine',.04,0.5]].forEach(([type,vol,mult])=>{
+      const o=audioCtx.createOscillator();const g=audioCtx.createGain();
+      o.type=type;o.frequency.setValueAtTime(f*mult,t);
+      g.gain.setValueAtTime(0,t);g.gain.linearRampToValueAtTime(vol,t+.04);
+      g.gain.setValueAtTime(vol,t+d-.07);g.gain.linearRampToValueAtTime(0,t+d);
+      o.connect(g);g.connect(audioCtx.destination);o.start(t);o.stop(t+d);
+    });
+    t+=d;
+  });
+}
+function toggleMusic(){
+  const btn=document.getElementById('mbtn');
+  if(!audioCtx)audioCtx=new(window.AudioContext||window.webkitAudioContext)();
+  if(!playing){playing=true;audioCtx.resume();playNotes();btn.textContent='⏸ Pause Song';}
+  else{playing=false;audioCtx.suspend();btn.textContent='🎵 Play Birthday Song';}
+}
+</script>
+</body>
+</html>
